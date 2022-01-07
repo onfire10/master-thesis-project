@@ -1,0 +1,8 @@
+server:
+  port: ${PORT:5211}
+
+spring:
+  rabbitmq:
+    host: ${RABBIT_URL:localhost}
+  application:
+    name: api-gateway-microservice

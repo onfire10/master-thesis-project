@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/api-gateway-service/api-gateway-service.iml" filepath="$PROJECT_DIR$/api-gateway-service/api-gateway-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/billing-service/billing-service.iml" filepath="$PROJECT_DIR$/billing-service/billing-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/customer-service/customer-service.iml" filepath="$PROJECT_DIR$/customer-service/customer-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/employee-service/employee-service.iml" filepath="$PROJECT_DIR$/employee-service/employee-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example-customer/example-customer.iml" filepath="$PROJECT_DIR$/example-customer/example-customer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/master-thesis-project.iml" filepath="$PROJECT_DIR$/.idea/master-thesis-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project-service/project-service.iml" filepath="$PROJECT_DIR$/project-service/project-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/smart-contract-service/smart-contract-service.iml" filepath="$PROJECT_DIR$/smart-contract-service/smart-contract-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/time-keeping-service/time-keeping-service.iml" filepath="$PROJECT_DIR$/time-keeping-service/time-keeping-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/update-service/update-service.iml" filepath="$PROJECT_DIR$/update-service/update-service.iml" />
+    </modules>
+  </component>
+</project>

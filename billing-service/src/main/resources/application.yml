@@ -1,0 +1,12 @@
+server:
+  port: ${PORT:5212}
+
+spring:
+  rabbitmq:
+    host: ${RABBIT_URL:localhost}
+  application:
+    name: billing-microservice
+  data:
+    mongodb:
+      uri: ${MONGODB_URL:mongodb://localhost:27017/}
+      database: billing-customer-db

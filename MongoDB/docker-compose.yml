@@ -1,0 +1,15 @@
+# Use root/example as user/password credentials
+version: '3.1'
+services:
+  mongo:
+    image: mongo:latest
+    restart: always
+    environment:
+      - MONGO_INITDB_DATABASE=employee-db
+      - MONGO_INITDB_DATABASE=billing-db
+      - MONGO_INITDB_DATABASE=time-keeping-db
+      - MONGO_INITDB_DATABASE=customer-db
+      - MONGO_INITDB_DATABASE=project-db
+      - MONGO_INITDB_DATABASE=example-customer-db
+    ports:
+      - 27017:27017

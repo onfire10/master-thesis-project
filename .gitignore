@@ -1,0 +1,11 @@
+#docker cmds
+
+#list images
+docker ps -a
+docker ps -aq (only id)
+
+#remove all containers
+docker system prune
+
+#land in container shell
+docker run -ti image /bin/bash

@@ -1,0 +1,8 @@
+server:
+  port: ${PORT:5217}
+
+spring:
+  rabbitmq:
+    host: ${RABBIT_URL:localhost}
+  application:
+    name: smart-contract-microservice
