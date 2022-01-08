@@ -1,0 +1,56 @@
+
+<div class="container">
+  <p>Record your working time</p>
+
+  <form name="workTimeForm" role="form" [formGroup]="workTimeForm">
+    <div class="row">
+      <div class="col-75">
+        <mat-form-field appearance="fill"
+                        [hideRequiredMarker]="hideRequiredControl.value"
+                        [floatLabel]="floatLabelControl.value">
+          <input matInput placeholder="Employee ID" formControlName="employeeId" required>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="form-group">
+      <mat-form-field appearance="fill"
+                      [hideRequiredMarker]="hideRequiredControl.value"
+                      [floatLabel]="floatLabelControl.value">
+        <input matInput placeholder="Project ID" formControlName="projectId" required>
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field appearance="fill">
+        <input matInput [ngxMatDatetimePicker]="pickerFrom" placeholder="From..." formControlName="startDate">
+
+        <mat-datepicker-toggle matSuffix [for]="$any(pickerFrom)"></mat-datepicker-toggle>
+
+        <ngx-mat-datetime-picker #pickerFrom [showSeconds]="false"
+                                 [stepHour]="1" [stepMinute]="15"></ngx-mat-datetime-picker>
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field appearance="fill">
+      <input matInput [ngxMatDatetimePicker]="pickerTo" placeholder="To..." formControlName="endDate">
+
+      <mat-datepicker-toggle matSuffix [for]="$any(pickerTo)"></mat-datepicker-toggle>
+
+      <ngx-mat-datetime-picker #pickerTo [showSeconds]="false"
+                               [stepHour]="1" [stepMinute]="15" [defaultTime]="defaultTime"></ngx-mat-datetime-picker>
+    </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field appearance="fill"
+                      [hideRequiredMarker]="hideRequiredControl.value"
+                      [floatLabel]="floatLabelControl.value">
+        <input matInput placeholder="What did you work on" formControlName="info" required>
+      </mat-form-field>
+    </div>
+
+    <button type="submit" mat-raised-button color="primary">Save</button>
+  </form>
+
+
+</div>
+
