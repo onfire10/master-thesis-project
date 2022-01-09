@@ -1,7 +1,7 @@
-package com.masterthesisproject.timekeepingservice.service;
+package com.masterthesisproject.apigatewayservice.service;
 
 import com.google.gson.Gson;
-import com.masterthesisproject.timekeepingservice.domain.WorkTime;
+import com.masterthesisproject.apigatewayservice.model.WorkTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.DirectExchange;
@@ -10,9 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class TimeKeepingRabbitProducer {
+public class WorkTimeRabbitProducer {
 
-    private final Logger log = LoggerFactory.getLogger(TimeKeepingRabbitProducer.class);
+    private final Logger log = LoggerFactory.getLogger(WorkTimeRabbitProducer.class);
     private String routingKey = "timeKeeping.createWorkTime";
 
     @Autowired

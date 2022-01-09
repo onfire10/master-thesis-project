@@ -1,34 +1,12 @@
-package com.masterthesisproject.timekeepingservice.domain;
+package com.masterthesisproject.apigatewayservice.model;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
-
-import java.io.Serializable;
-
-@Document(collection = "work-time")
-public class WorkTime implements Serializable {
-
-    @Id
+public class WorkTime {
     private String id;
-
-    @Field("employeeId")
     private String employeeId;
-
-    @Field("projectId")
     private String projectId;
-
-    @Field("from")
     private String fromTimestamp;
-
-    @Field("to")
     private String toTimestamp;
-
-    @Field("info")
     private String info;
-
-    @Field("sha256-hash")
-    private String hash;
 
     public String getId() {
         return id;
@@ -76,13 +54,5 @@ public class WorkTime implements Serializable {
 
     public void setInfo(String info) {
         this.info = info;
-    }
-
-    public String getHash() {
-        return hash;
-    }
-
-    public void setHash(String hash) {
-        this.hash = hash;
     }
 }
