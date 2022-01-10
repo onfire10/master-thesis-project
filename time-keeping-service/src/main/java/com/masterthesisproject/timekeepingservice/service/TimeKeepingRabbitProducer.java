@@ -2,6 +2,7 @@ package com.masterthesisproject.timekeepingservice.service;
 
 import com.google.gson.Gson;
 import com.masterthesisproject.timekeepingservice.domain.WorkTime;
+import com.masterthesisproject.timekeepingservice.model.BlockchainEntry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.DirectExchange;
@@ -13,26 +14,24 @@ import org.springframework.stereotype.Service;
 public class TimeKeepingRabbitProducer {
 
     private final Logger log = LoggerFactory.getLogger(TimeKeepingRabbitProducer.class);
-    private String routingKey = "timeKeeping.createWorkTime";
 
     @Autowired
     private RabbitTemplate template;
 
     @Autowired
-    private DirectExchange exchangeCreateWorkTime;
+    private DirectExchange exchangeCreateWorkTimeEntry;
 
-    public String send(DirectExchange directExchange, String routingKey, String message){
-        String response = "";
+    public void send(DirectExchange directExchange, String routingKey, String message){
         try{
-            response = template.convertSendAndReceive(directExchange.getName(), routingKey, message).toString();
-            log.info("Got Rabbit response: {}", response);
+            template.convertAndSend(directExchange.getName(), routingKey, message);
         } catch (Exception e){
             e.getMessage();
         }
-        return response;
     }
 
-    public String createWorkTime(WorkTime workTime) {
-        return send(exchangeCreateWorkTime, routingKey, new Gson().toJson(workTime));
+    public void sendToSmartContract(BlockchainEntry blockchainEntry) {
+        String routingKey = "smartContract.createWorkTimeEntry";
+        String message = new Gson().toJson(blockchainEntry);
+        send(exchangeCreateWorkTimeEntry, routingKey, message);
     }
 }

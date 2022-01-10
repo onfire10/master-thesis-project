@@ -9,6 +9,9 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class RabbitConfig {
+
+    //=================RECEIVING FROM REST================
+
     @Bean
     public Queue createWorkTimeQueue() {
         return new Queue("timeKeeping.createWorkTime.requests");
@@ -24,5 +27,12 @@ public class RabbitConfig {
         return BindingBuilder.bind(createWorkTimeQueue)
                 .to(exchangeCreateWorkTime)
                 .with("timeKeeping.createWorkTime");
+    }
+
+    //=================SENDING WRITES TO BLOCKCHAIN================
+
+    @Bean
+    public DirectExchange exchangeCreateWorkTimeEntry() {
+        return new DirectExchange("timeKeeping.createWorkTimeEntry");
     }
 }

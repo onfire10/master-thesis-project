@@ -9,3 +9,5 @@ docker system prune
 
 #land in container shell
 docker run -ti image /bin/bash
+
+.idea
