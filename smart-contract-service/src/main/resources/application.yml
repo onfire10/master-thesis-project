@@ -6,3 +6,11 @@ spring:
     host: ${RABBIT_URL:localhost}
   application:
     name: smart-contract-microservice
+
+blockchain-util:
+  wallet:
+    filename: UTC--2022-02-13T16-09-00.276895500Z--17a065b8f3f300dbdedbcd2fd6ee7e21fd5ca7e6.json
+    path: smart-contract-service/src/main/resources
+  contract:
+    address: "0xE397F480C3e62c8f0E79E1A188aC10e33f962833"
+

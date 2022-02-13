@@ -10,3 +10,6 @@ spring:
     mongodb:
       uri: ${MONGODB_URL:mongodb://localhost:27017/}
       database: example-customer-db
+
+blockchain:
+  contract-address: "0xE397F480C3e62c8f0E79E1A188aC10e33f962833"

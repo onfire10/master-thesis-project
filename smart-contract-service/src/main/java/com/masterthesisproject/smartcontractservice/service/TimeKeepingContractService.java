@@ -16,6 +16,7 @@ public class TimeKeepingContractService {
         TimeKeeping timeKeeping = BlockchainService.getInstance().getContract();
         try {
             log.info("Sending entry to blockchain");
+            log.info("entry ID: {}, entryHash: {}", entry.getEntryId(), entry.getHash());
             timeKeeping.addEntryHash(entry.getEntryId(), entry.getHash()).send();
             log.info("Successful write to blockchain");
         } catch (Exception exception) {
