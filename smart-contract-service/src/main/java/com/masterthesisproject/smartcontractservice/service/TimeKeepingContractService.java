@@ -20,7 +20,7 @@ public class TimeKeepingContractService {
             timeKeeping.addEntryHash(entry.getEntryId(), entry.getHash()).send();
             log.info("Successful write to blockchain");
         } catch (Exception exception) {
-            log.info("Write to blockchain unsuccessful");
+            log.info("Write to blockchain failed");
             exception.printStackTrace();
         }
     }

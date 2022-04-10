@@ -139,8 +139,6 @@ S
 +Blockchain/build/contracts/TimeKeeping.json,5\5\551d033499909b89ba7a00406ec0f002cd803b62
 ¶
 vsmart-contract-service/src/main/java/com/masterthesisproject/smartcontractservice/SmartContractServiceApplication.java,a\3\a3f5ed7769d0b05ea1b1bb1e31b4880c5a94abd0
-’
-§smart-contract-service/src/main/java/com/masterthesisproject/smartcontractservice/UTC--2022-01-10T01-11-59.938889300Z--1da7530320c48a414a074461dbf132f4810464bf.json,6\e\6e9d04ff1f57beef5a9f7dfb1c711c3af5e66007
 L
 Blockchain/truffle-config.js,c\2\c2a8bc0331996729d17e24de526b254cb456f6ea
 :
@@ -158,8 +156,6 @@ aexample-customer/src/main/java/com/masterthesisproject/examplecustomer/model/Bl
 jexample-customer/src/main/java/com/masterthesisproject/examplecustomer/domain/ServiceProviderWorkTime.java,2\7\27d582b28008a0cc0b36982218a3808ff5b36b5a
 ö
 jexample-customer/src/main/java/com/masterthesisproject/examplecustomer/controller/WorkEntryController.java,d\7\d7cfe0f4f510f1ed969574840330abc30eff0dd0
-…
-òexample-customer/src/main/java/com/masterthesisproject/examplecustomer/UTC--2022-01-10T13-46-01.61661900Z--e7883a8ed834a60c03df38528c60a2da1b22ab4f.json,3\4\348b4c7dc76f07db660fdd0d5a8d35051b9f8f34
 ñ
 fexample-customer/src/main/java/com/masterthesisproject/examplecustomer/ExampleCustomerApplication.java,6\f\6f26ded06c751d57d51cf0df164b1c3e18e06004
 è

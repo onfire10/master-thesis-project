@@ -8,6 +8,7 @@ import org.web3j.crypto.WalletUtils;
 import org.web3j.protocol.Web3j;
 import org.web3j.protocol.http.HttpService;
 import org.web3j.tx.gas.ContractGasProvider;
+import org.web3j.tx.gas.DefaultGasProvider;
 
 import java.io.File;
 import java.math.BigInteger;
@@ -38,10 +39,10 @@ public class BlockchainService {
                             "PASSWORD",
                             walletPath + "/" + walletFilename);
 
-
-
             System.out.println(contractAddress);
-            contract = TimeKeeping.load(contractAddress, web3j, credentials,BigInteger.valueOf(0), BigInteger.valueOf(6721975));
+            //contract = TimeKeeping.load(contractAddress, web3j, credentials,BigInteger.valueOf(0), BigInteger.valueOf(6721975));
+            contract = TimeKeeping.load(contractAddress, web3j, credentials, new DefaultGasProvider());
+
             System.out.println("Contract loaded succesfully");
         }
         catch (Exception e){
